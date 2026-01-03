@@ -1,3 +1,4 @@
+// Bascis of JavaScript 
 <<<<<<< HEAD
 
 //Json format Object
