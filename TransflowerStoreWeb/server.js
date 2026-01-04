@@ -31,7 +31,15 @@ app.get("/", (req , res)=>{
 
 app.post("/login",(request , response)=>{
     console.log(request.body);
-    console.log("Login form is posted by browser is secived at server")
+    var user = request.body;
+    if(user.email=="saijagdale@gmail.com" && 
+       user.password=="Sai123"){
+        console.log("Valid User");
+    }
+    else{
+        console.log("Invalid User");
+    }
+    console.log("Login form is posted by browser is secived at server");
 });
 
 app.post("/register",(request , response)=>{
