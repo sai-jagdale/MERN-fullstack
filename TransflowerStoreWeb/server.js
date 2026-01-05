@@ -29,15 +29,20 @@ app.get("/", (req , res)=>{
     res.sendFile(path.join(__dirname + '/index.html'));
 }); // always mapped to some url and handels the http requests
 
+
+
+//REST API : Programmable  Logic access via HTTP verbs using any third party application
+
+
 app.post("/login",(request , response)=>{
     console.log(request.body);
     var user = request.body;
     if(user.email=="saijagdale@gmail.com" && 
        user.password=="Sai123"){
-        console.log("Valid User");
+       response.send("Welcome");
     }
     else{
-        console.log("Invalid User");
+        response.send("Invalid User");
     }
     console.log("Login form is posted by browser is secived at server");
 });
