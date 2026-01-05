@@ -27,7 +27,7 @@ app.use(staticFolderMiddleware);
 
 app.get("/", (req , res)=>{
     res.sendFile(path.join(__dirname + '/index.html'));
-});
+}); // always mapped to some url and handels the http requests
 
 app.post("/login",(request , response)=>{
     console.log(request.body);
