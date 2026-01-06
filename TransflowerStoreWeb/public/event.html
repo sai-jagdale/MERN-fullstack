@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transflower Store</title>
+    </head>
+
+    <body>
+        <button id ="myBtn">Press Me</button>
+        <p id="demo">Hello</p>
+
+        <script>
+            var btn = document.getElementById("myBtn");
+
+            // event handler registration for click event
+            btn.addEventListener("click",dispalyDate);
+            function dispalyDate(){
+                document.getElementById("demo").innerHTML = Date();
+            }
+        </script>
+    </body>
+</html>

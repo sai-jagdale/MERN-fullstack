@@ -6,3 +6,5 @@ Handlers and Emitters in Javascripts ------ example Banking ;
 Basic Web Application using basic html , javascript and creating a custom http server ;
 
 
+node_module is a file which has all depemdencies needed for express to run 
+

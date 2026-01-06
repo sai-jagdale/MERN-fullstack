@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Transflower Flower</title>
+    </head>
+
+    <body>
+        <h1>Online Flower Shop</h1>
+
+        <a href="/">Home</a> | <a href="/about.html">About us</a> | <a href="/contact.html">Contact us</a> | <a href="/login.html">Sign In</a>
+        <hr/>
+        
+        <input id="username" type="text" value="Sai"/>
+        <input id="location" type="text" value="Pune"/>
+        <button onClick="onButtonClick()">Show Data</button>
+        <br/>
+        
+        <p id="para1">UserName</p>
+        <p id="para2">Location</p>
+        <script>
+            var onButtonClick = function(){
+                //getting reference of element whose id is username
+                var txtElement = document.getElementById("username");
+                var UsernameData=txtElement.value;
+                var txtLocation = document.getElementById("location");
+                var LocationData=txtLocation.value;
+                //get the reference of element whose id is para1
+                var paraElement = document.getElementById("para1");
+                paraElement.innerHTML= UsernameData;
+                var paraLocation = document.getElementById("para2");
+                paraLocation.innerHTML= LocationData;
+
+            // DOM API - Document Object Model
+            // API - Application Prohrmmers Interface (built in function provided by DOM)
+            // document.createElement()-------- will create new element
+            // document.removeChild()-------- will remove existing html element
+            // document.appendChild()-------- will add new element as child to existing html element
+            // document.replaceChild()
+            // document.erite()
+
+            }
+        </script>
+    </body>
+
+</html>

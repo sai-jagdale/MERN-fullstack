@@ -11,6 +11,18 @@
 
         <a href="/">Home</a> | <a href="/about.html">About us</a> | <a href="/contact.html">Contact us</a> | <a href="/login.html">Sign In</a>
     <hr/>
+
+        <p id="para1">This is simple sentence...</p>
+        <button onClick = "onClickButton()">Change content</button>
+
+        <script>
+            var onClickButton = function(){
+                //alert("button pressed .....");
+                // DOM
+                var element = document.getElementById("para1");
+                element.innerHTML = "Transflower Learning Pvt. Ltd."
+            }
+        </script>
     </body>
 
 </html>

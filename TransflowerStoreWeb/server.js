@@ -3,6 +3,7 @@
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
+// constantly app is express object.
 const app = express();
 
 app.use(bodyParser.urlencoded({extended:true}));
