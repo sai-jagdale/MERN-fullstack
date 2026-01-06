@@ -10,13 +10,46 @@
         <p id="demo">Hello</p>
 
         <script>
+            // What is the rro node of DOM tree
+            
             var btn = document.getElementById("myBtn");
 
             // event handler registration for click event
+            // Event Handlers
+            // Event Recivers
+            // Event Listeners
+
             btn.addEventListener("click",dispalyDate);
+
+            document.addEventListener("mousedown",onMouseDown);
+            document.addEventListener("mousemove",onMouseMove);
+            document.addEventListener("mouseup",onMouseUp);
+
             function dispalyDate(){
                 document.getElementById("demo").innerHTML = Date();
-            }
+            };
+
+            function onMouseDown(event){
+                var x = event.clientX;
+                var y = event.clientY;
+                var corords = "X coords: " + x + " Y coords: " + y;
+                console.log("Mouse Down Event");
+                document.getElementById("demo").innerHTML = "Mouse Down" + corords;
+            };
+            function onMouseMove(event){
+                var x = event.clientX;
+                var y = event.clientY;
+                var corords = "X coords: " + x + " Y coords: " + y;
+                console.log("Mouse Move Event");
+                document.getElementById("demo").innerHTML = "Mouse Move" + corords;
+            };
+            function onMouseUp(event){
+                var x = event.clientX;
+                var y = event.clientY;
+                var corords = "X coords: " + x + " Y coords: " + y;
+                console.log("Mouse Up Event");
+                document.getElementById("demo").innerHTML = "Mouse Up" + corords;
+            };
         </script>
     </body>
 </html>

@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+
+
 // Domain : Banking 
 // OPertaions : Credit , Debit
 // Buisness Entity : Account
@@ -81,7 +82,8 @@ ammount = 14000;
 Acc1.debit(ammount);
 data = Acc1.recieveBalance();
 console.log("Balance after debiting " + ammount + " is " + data);
-=======
+
+
 // Domain : Banking 
 // OPertaions : Credit , Debit
 // Buisness Entity : Account
@@ -164,4 +166,4 @@ ammount = 14000;
 Acc1.debit(ammount);
 data = Acc1.recieveBalance();
 console.log("Balance after debiting " + ammount + " is " + data);
->>>>>>> 6ac402e7e8b75601b3a66ea90fdd7f0365b55284
+
