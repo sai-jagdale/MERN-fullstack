@@ -25,6 +25,8 @@
             document.addEventListener("mousemove",onMouseMove);
             document.addEventListener("mouseup",onMouseUp);
 
+            document.addEventListener("keydown",onKeyDown);
+
             function dispalyDate(){
                 document.getElementById("demo").innerHTML = Date();
             };
@@ -49,6 +51,12 @@
                 var corords = "X coords: " + x + " Y coords: " + y;
                 console.log("Mouse Up Event");
                 document.getElementById("demo").innerHTML = "Mouse Up" + corords;
+            };
+
+            function onKeyDown(event){
+                var key = event.key;
+                console.log("Key Down Event");
+                document.getElementById("demo").innerHTML = "Key Down: " + key;
             };
         </script>
     </body>
