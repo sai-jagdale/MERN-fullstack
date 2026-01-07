@@ -1,0 +1,43 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <title>Register</title>
+</head>
+
+<body>
+
+    <lable>User Name:</lable> <input type="text" id="username" name="username" required />
+    <br/>
+    <lable>Password:</lable> <input type="password" id="password" name="password" required />
+    <br/>
+    <hr/>
+
+    <button onClick="onRegister()">Register</button>
+
+    <script>
+        var onRegister = function(){
+            
+            if(typeof(Storage)!=="undefined"){
+                    
+                var txtUserName = document.getElementById("username");
+                var userName = txtUserName.value;
+
+                var txtPassword = document.getElementById("password");
+                var password = txtPassword.value;
+                
+                var validuser = {
+                    "username": userName,
+                    "password": password
+                }
+                
+                localStorage.setItem("validuser",JSON.stringify(validuser));
+                }
+               else{
+                    var divId = document.getElementById("result");
+                    divId.innerHTML = "Sorry,your browser does not support html5 feature webStorage";
+               } 
+        }
+    </script>
+</body>
+
+</html>
