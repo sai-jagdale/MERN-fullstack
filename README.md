@@ -31,3 +31,5 @@ Canvas is rendered pixel by pixel.
 In canvas, once the graphic is drawn, it is forgotten by the browser.
 If its position should be changed, the entire scene needs to be redrawn, including any objects that might have been covered by the graphic.
 
+redressing grapics
+raster 
