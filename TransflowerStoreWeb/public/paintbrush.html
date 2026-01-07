@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Paint Brush</title>
+    </head>
+
+    <body>
+        <canvas id="canvas1" width="500" height="500" style="background-color:aquamarine;"></canvas>
+        <canvas id="canvas2" width="500" height="500" style="background-color:rgb(76, 14, 175);"></canvas>
+        <canvas id="canvas3" width="500" height="500" style="background-color:rgb(220, 22, 78);"></canvas>
+        <canvas id="canvas4" width="500" height="500" style="background-color:rgb(158, 188, 23);"></canvas>
+        <canvas id="canvas5" width="500" height="500" style="background-color:rgb(240, 84, 12);"></canvas>
+        <h1 style="color: blueviolet;">Transflower Paint Brush</h1>
+        <p style="color: rgb(127, 78, 19);font-size:large;font-family: 'Times New Roman', Times, serif;">Doing ordinary things extraordinarily</p>
+        
+        <script>
+            function drawLine(){
+                // DOM 
+                var theCanvas = document.getElementById("canvas1");
+                // getContext is the inbuilt function of canvas
+                var context = theCanvas.getContext("2d");
+                context.moveTo(10,300); // starting point
+                context.lineTo(300,300); // ending point
+                context.stroke();
+            };
+
+            function drawRectangle(){
+                var theCanvas = document.getElementById("canvas2");
+                // getContext is the inbuilt function of canvas
+                var context = theCanvas.getContext("2d");
+                // for rectange (x coordinate, y coordinate, width, height)
+                // color for the rectange if not specified it will be black by default 
+                context.fillStyle = "red";
+                context.fillRect(50,50,300,200);
+            };
+
+            function drawTriangle(){
+                var canvas = document.getElementById("canvas3");
+                if (canvas.getContext){
+                    var ctx = canvas.getContext("2d");
+                    ctx.beginPath();
+                    ctx.moveTo(305,50);
+                    ctx.lineTo(100,75); 
+                    ctx.lineTo(100,25);
+                    ctx.fill();
+                }
+            }
+
+            function drawCircle(){
+                var canvas = document.getElementById("canvas4");
+                if (canvas.getContext){
+                    var ctx = canvas.getContext("2d");
+                    ctx.beginPath();
+                    // x,y,radius,start angle,end angle,counterclockwise
+                    ctx.arc(300,300,150,0,2 * Math.PI ); 
+                    ctx.fillStyle = "yellow";
+                    ctx.fill();
+                }
+            }
+
+            function drawSmily(){
+                var canvas = document.getElementById("canvas5");
+                if (canvas.getContext){
+                    var ctx = canvas.getContext("2d");
+                    // face
+                    ctx.beginPath();
+                    ctx.arc(75, 75, 50,0, Math.PI * 2, true); // Outer circle
+                    ctx.moveTo(110, 75);
+                    ctx.arc(75, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+                    ctx.moveTo(65, 65);
+                    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+                    ctx.moveTo(95, 65);
+                    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+                    ctx.stroke();
+                   
+                }
+            }
+            drawLine();
+            drawRectangle();
+            drawTriangle();
+            drawCircle();
+            drawSmily();
+
+        </script>
+    </body>
+</html>
+
+<!--basics
+    syntax
+    rules
+    keywords
+    using builtin library functions-->>
