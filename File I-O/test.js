@@ -4,7 +4,6 @@ var fileName2 = "./data/result.txt";
 
 // here "." means currebnt folder 2 . dots means 2 folder above this folder
 
-
 // callback function 
 var onFileRead = function(err , data){
 // when the particular file in not available error will bw sent in err variable

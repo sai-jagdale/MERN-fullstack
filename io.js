@@ -30,7 +30,7 @@ var Students = [
 
 console.log(fruit);
 console.log(marks);
-=======
+
 
 //Json format Object
 // JSON --- JavaScript Object Notation
@@ -61,5 +61,5 @@ var Students = [
 
 console.log(fruit);
 console.log(marks);
->>>>>>> 6ac402e7e8b75601b3a66ea90fdd7f0365b55284
+
 console.log(Students);

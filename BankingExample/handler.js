@@ -22,7 +22,6 @@ exports.sendEmail = function(){
     console.log("Email sent reguarding low balance");
 };
 
-=======
 
 // modularity Event Handaling Module
 // event listners for emitter : a kind of dedicated functions which---

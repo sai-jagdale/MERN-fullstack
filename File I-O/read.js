@@ -2,8 +2,7 @@ var fs = require('fs');
 var fileName1 = "./data/data.txt";
 var fileName2 = "./data/result.txt";
 
-// here "." means currebnt folder 2 . dots means 2 folder above this folder
-
+// here "." means current folder 2 . dots means 2 folder above this folder
 
 // callback function 
 var onFileRead = function(err , data){
