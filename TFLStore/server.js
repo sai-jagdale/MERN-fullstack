@@ -122,5 +122,11 @@ app.post("/api/register",(request,response)=>{
     response.send("Customer Registered Successfully");
 });
 
+app.delete("/api/flowers/:id",(request,response)=>{
+    let id = request.params.id;
+    let remainingFlower = flowers.filter(flower=>flower.id!=id);
+    flowers = remainingFlower;
+    response.send("Flower Deleted Successfully");
+});
 app.listen(9898);
 console.log("Server running on port 9898")
