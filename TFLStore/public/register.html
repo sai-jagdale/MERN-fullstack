@@ -1,0 +1,38 @@
+<!DOCTYPE html >
+<html>
+    <head>
+        <title>Register Form</title>
+    </head>
+    <body>
+        <h1>Register New User</h1>
+        <hr/>
+        <form action="/api/register" method="POST">
+        <table>
+            <tr>
+                <td><lable>ID</lable></td>
+                <td><input type="text" id="id" name="id" required /></td>
+            </tr>
+            <tr>
+                <td><lable>First Name</lable></td>
+                <td><input type="text" id="firstname" name="firstname" required /></td>
+            </tr>
+            <tr>
+                <td><lable>Last Name</lable></td>
+                <td><input type="text" id="lastname" name="lastname" required /></td>
+            </tr>
+            <tr>
+                <td><lable>Email ID</lable></td>
+                <td><input type="email" id="email" name="email" required /></td>
+            </tr>
+            <tr>
+                <td><lable>Contact Number</lable></td>
+                <td><input type="text" id="contact" name="contact" required /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit">Sign In</button></td>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>

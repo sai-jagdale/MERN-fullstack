@@ -3,40 +3,15 @@ var path = require('path');
 
 const app = express();
 // to store user criedentials
-var criedentials = [
-    {"id":1,"username":"Sai","password":"sai123"},
-    {"id":2,"username":"Raj","password":"raj123"},
-    {"id":3,"username":"Anita","password":"anita123"},
-    {"id":4,"username":"Vikram","password":"vikram123"},
-    {"id":5,"username":"Neha","password":"neha123"},
-    {"id":6,"username":"Amit","password":"amit123"},
-    {"id":7,"username":"Pooja","password":"pooja123"},
-    {"id":8,"username":"Rohit","password":"rohit123"},
-    {"id":9,"username":"Sonal","password":"sonal123"},
-    {"id":10,"username":"Karan","password":"karan123"}
-]
+var criedentials = require("./data/credentials.json");
 
 // Product catlog data
-var flowers = [
-    {"id":1,"name":"Rose","color":"Red","price":10,"imageurl":"/images/rose.jpg","likes":4500},
-    {"id":2,"name":"Jasmine","color":"White","price":12,"imageurl":"/images/jasmine.jpg","likes":3000},
-    {"id":3,"name":"Tulip","color":"Pink","price":15,"imageurl":"/images/tulip.jpg","likes":2500},
-    {"id":4,"name":"Lily","color":"White-Pink","price":8,"imageurl":"/images/lily.jpg","likes":4000},
-    {"id":5,"name":"Orchid","color":"Purple","price":20,"imageurl":"/images/orchid.jpg","likes":1500}
-];
+var flowers = require("./data/flowers.json");
 // customer Relationship data (CRM data)
-var customers =[
-    {"id":1,"firstname":"Sai","lastname":"Jagdale","email":"sai.jagdale@gmail.com","contact":"9876543210"},
-    {"id":2,"firstname":"Raj","lastname":"Patil","email":"raj@gmail.com","contact":"8765432109"},
-    {"id":3,"firstname":"Anita","lastname":"Shah","email":"shah.anita@gmail.com","contact":"7654321098"},
-    {"id":4,"firstname":"Vikram","lastname":"Deshmukh","email":"deshmukh@gmail.com","contact":"6543210987"},
-    {"id":5,"firstname":"Neha","lastname":"Kumar","email":"neha.kumar@gmail.com","contact":"5432109876"},
-    {"id":6,"firstname":"Amit","lastname":"Singh","email":"singh.a@gmail.com","contact":"4321098765"},
-    {"id":7,"firstname":"Pooja","lastname":"Verma","email":"pooja@gmail.com","contact":"3210987654"} 
-];
+var customers = require("./data/customers.json");
 
 var orders = [];
-var payements = [];
+var payments = [];
 
 app.use(express.static(path.join(__dirname,'public')));
 app.use(express.urlencoded({ extended: true }));
@@ -95,6 +70,7 @@ app.get("/api/customers/:id",(request,response)=>{
 
 // HTTP POST handlers
 app.post("/api/login",(request,response)=>{
+    console.log("Login API Invoked");
     var user = request.body;
     /*if (user.username=="saijagdale@gmail.com" && user.password=="sai123"){
         response.send("valid user");
@@ -118,9 +94,15 @@ app.post("/api/login",(request,response)=>{
 
 app.post("/api/register",(request,response)=>{
     var newCustomer = request.body;
-    customer.push(newCustomer);
+    customers.push(newCustomer);
     response.send("Customer Registered Successfully");
 });
+
+app.post("/api/flowers",(request,response)=>{
+    let newFlower = request.body;
+    flowers.push(newFlower);
+    response.send("Flower Added Successfully");
+})
 
 app.delete("/api/flowers/:id",(request,response)=>{
     let id = request.params.id;
