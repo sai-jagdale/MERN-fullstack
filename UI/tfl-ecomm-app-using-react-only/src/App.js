@@ -19,7 +19,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Transflower Store
         </p>
         <a
           className="App-link"
@@ -27,7 +27,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          TransFlower Ecommerece Application
+          Let us purchase flowers
         </a>
       </header>
     </div>
