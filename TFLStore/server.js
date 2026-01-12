@@ -68,6 +68,18 @@ app.get("/api/customers/:id",(request,response)=>{
     response.send(customer);
 });
 
+app.put("/api/customers/:id",(req, res)=>{
+    //fine the object in customers collection
+    //update the object by new object into customers collection
+    
+    var existingCustomerId = request.params.id;
+    var customerToBeUpdated = req.body;
+    //update data to array customers
+    console.log("data to be updated at customers @server");
+    console.log(customerToBeUpdated)
+    response.send("Customer data updated");
+})
+
 // HTTP POST handlers
 app.post("/api/login",(request,response)=>{
     console.log("Login API Invoked");
