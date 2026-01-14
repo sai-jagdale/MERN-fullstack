@@ -1,7 +1,27 @@
 var express = require('express');
 var path = require('path');
-
+var fs = require('fs');
 const app = express();
+
+var mysql = require('mysql2');
+
+var dbServer = {
+    host:'localhost',
+    user:'root',
+    password:'Sai@1406',
+    database:'customers'
+};
+var connection = mysql.createConnection(dbServer);
+//will establish TCP connection with MySQL
+connection.connect(function(err){
+    if(err){
+        console.log("Connection Unsucessful.."+ err);
+    }
+    else{
+        console.log("Connection Sucessfull...")
+    }
+});
+
 // to store user criedentials
 var criedentials = require("./data/credentials.json");
 
@@ -16,7 +36,6 @@ var payments = [];
 app.use(express.static(path.join(__dirname,'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
 
 // This web application has 5 HTTP handlers
 
@@ -58,6 +77,21 @@ app.get("/api/flowers/:id",(request,response)=>{
     // Web Processing Logic
 });
 
+app.get("/api/users",(request, response)=>{
+    var selectAllQuery = "select * from users";
+    connection.query(selectAllQuery,function(err,data){
+     if(err){
+        console.log("error : "+ err);
+     }
+     else{
+        console.log("All Rows....");
+        console.log(data);
+        response.send(data)
+     }
+});
+//response.send(data)
+})
+
 app.get("/api/customers",(request,response)=>{
     response.send(customers);
 });
@@ -72,12 +106,12 @@ app.put("/api/customers/:id",(req, res)=>{
     //fine the object in customers collection
     //update the object by new object into customers collection
     
-    var existingCustomerId = request.params.id;
+    var existingCustomerId = req.params.id;
     var customerToBeUpdated = req.body;
     //update data to array customers
     console.log("data to be updated at customers @server");
     console.log(customerToBeUpdated)
-    response.send("Customer data updated");
+    res.send("Customer data updated");
 })
 
 // HTTP POST handlers
