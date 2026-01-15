@@ -1,0 +1,65 @@
+/* ===== Transflower Theme ===== */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Override Bootstrap colors */
+:root {
+  --bs-primary: #e91e63;       /* blossom pink */
+  --bs-secondary: #4caf50;     /* leaf green */
+  --bs-warning: #ffeb3b;       /* sunshine yellow */
+}
+
+.navbar .nav-link {
+  color: rgb(0, 0, 0) !important;
+}
+.navbar .navbar-brand{
+  color: rgb(0, 0, 0) !important;
+}
+
+.custom-nav {
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4,  #ff9a9e);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+/* size of image in carousel */
+.product-img {
+    width: 5cm;
+    height: 5cm;
+    object-fit: cover;
+  }
+
+/* button in the carousel */
+.btn-outline-pink {
+  color: #ff2d96;          /* pink text */
+  border-color: #8c0649;   /* pink border */
+}
+.btn-outline-pink:hover {
+  background-color: #ff2d96; 
+  color: white; 
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.35); /* semi transparent */
+    backdrop-filter: blur(8px);            /* blur effect */
+    -webkit-backdrop-filter: blur(8px);    /* for Safari */
+    border: 1px solid rgba(255, 255, 255, 0.25); /* optional frost border */
+  }
+
+.nav-link.active {
+  color: var(--bs-warning) !important;
+  font-weight: 600;
+}
