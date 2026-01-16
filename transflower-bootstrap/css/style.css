@@ -1,0 +1,162 @@
+/* ===== Transflower Theme ===== */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Override Bootstrap colors */
+:root {
+  --bs-primary: #e91e63;       /* blossom pink */
+  --bs-secondary: #4caf50;     /* leaf green */
+  --bs-warning: #ffeb3b;       /* sunshine yellow */
+}
+
+.navbar .nav-link {
+  color: rgb(0, 0, 0) !important;
+}
+.navbar .navbar-brand{
+  color: rgb(0, 0, 0) !important;
+}
+
+.custom-nav {
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4,  #ff9a9e);
+}
+.custom-sec {
+  background: linear-gradient(90deg, #b6fded, #f5fffb,  #b6fded);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+}
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+.btn-outline-pink {
+  color: #ff9a9e;          /* pink text */
+  border-color: #8c0649;   /* pink border */
+  
+}
+.btn-outline-pink:hover {
+  background-color: #ff9a9e; 
+  color: rgb(0, 0, 0); 
+}
+
+.btn-outline-blue {
+  color: #b6fded;          /* pink text */
+  border-color: #59c5d7;   /* pink border */
+}
+.btn-outline-blue:hover {
+  background-color: #b6fded; 
+  color: rgb(0, 0, 0); 
+}
+
+.nav-link.active {
+  color: var(--bs-warning) !important;
+  font-weight: 600;
+}
+
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.modal-content {
+  border-radius: 12px;
+}
+
+.navbar-brand i {
+  animation: bloom 2s ease-in-out infinite alternate;
+}
+
+@keyframes bloom {
+  0% { transform: scale(1); color: #fff; }
+  100% { transform: scale(1.2); color: #ffeb3b; }
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(233, 30, 99, 0.25);
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #e91e63;
+  color: #fff;
+}
+
+.tab-content {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.accordion-button:hover {
+  background-color: #fea0a3 !important; /* soft pink */
+  color: #000 !important;               /* keep text readable */
+  transition: background-color 0.2s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #ff9a9e !important; /* slightly darker active pink */
+  color: #000 !important;
+  box-shadow: none;
+}
+
+.accordion-item {
+  border: 1px solid #f7c5dc;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.accordion-button::after {
+  transition: transform .3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(90deg);
+}
+
+h1 {
+  color: #e91e63;
+  font-weight: bold;
+ font-size: xx-large;
+  font-style: italic;
+}
+
+.lead {
+  color: #555;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.btn-danger {
+  border-radius: 25px;
+}
+
+.card-header h4 {
+  letter-spacing: 1px;
+}
+
+.form-title {
+  color: black !important;
+}
