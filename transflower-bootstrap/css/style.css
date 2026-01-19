@@ -19,7 +19,7 @@ body {
 
 
 .custom-nav {
-  background: #f0d2a5;
+  background: #f4d099;
 }
 
 html {
@@ -27,12 +27,14 @@ html {
 }
 
 .card {
-  height: 100%;
-  width: 100%;
+  min-height: 500px;
 }
-.card-img-top {
-  height: 300px;
-  object-fit: cover;
+.product-img {
+  height: 300px;       /* Change to desired size */
+  width: 100%;
+  object-fit: cover;   /* Maintains aspect & avoids distortion */
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
 }
 
 .btn-outline-pink {
@@ -123,11 +125,6 @@ h1 {
 
 .lead {
   color: #555;
-}
-
-.card img {
-  height: 200px;
-  object-fit: cover;
 }
 
 body {
