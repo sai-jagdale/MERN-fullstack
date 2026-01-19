@@ -31,10 +31,20 @@
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
+    <div class="d-flex">
+        <!-- BEFORE LOGIN -->
+        <a id="loginBtn" href="login.html" class="btn btn-outline-pink">Login</a>
+        <a id="registerBtn" href="register.html" class="btn btn-outline-pink ms-2">Register</a>
+        <!-- AFTER LOGIN -->
+        <div id="userMenu" class="dropdown ms-2" style="display:none;">
+            <button class="btn btn-outline-pink dropdown-toggle" data-bs-toggle="dropdown">Welcome 🌼</button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" id="logoutBtn" href="#">Logout</a></li>
+            <li><a class="dropdown-item text-danger" id="deleteBtn" href="#">Delete Account</a></li>
+        </ul>
+        </div>
     </div>
-    <div>
-    <a href="login.html" class="btn btn-outline-pink">Login</a>
-  </div>
+
   </div>
 </nav>
 
@@ -50,6 +60,32 @@
   <h2>Why Choose Transflower?</h2>
   <p class="lead">We deliver fresh, handpicked flowers that speak your emotions beautifully.</p>
 </section>
+
+<div class="container my-5">
+  <ul class="nav nav-tabs custom-tabs" id="categoryTabs" role="tablist">
+    <li class="nav-item">
+      <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#flowers">Flowers</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#gifts">Gifts</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#plants">Plants</button>
+    </li>
+  </ul>
+
+  <div class="tab-content p-3 border border-top-0 rounded-bottom shadow-sm">
+    <div class="tab-pane fade show active" id="flowers">
+      <p>Explore our vibrant collection of fresh flowers.</p>
+    </div>
+    <div class="tab-pane fade" id="gifts">
+      <p>Unique gifts for birthdays, weddings, and more.</p>
+    </div>
+    <div class="tab-pane fade" id="plants">
+      <p>Indoor and outdoor plants to bring freshness home.</p>
+    </div>
+  </div>
+</div>
 
 <!-- new -->
 <section class="container my-5">
@@ -122,7 +158,7 @@
 </section>
 
 <!-- Footer -->
-<footer class="text-center text-white py-3 custom-nav" >
+<footer class="text-center py-3 from-title custom-nav" >
   <p class="mb-0">&copy; 2025 Transflower Store | Designed with 💗 using Bootstrap</p>
 </footer>
 
@@ -139,6 +175,30 @@
     }
   };
   scrollBtn.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+
+  const loginBtn = document.getElementById("loginBtn");
+  const registerBtn = document.getElementById("registerBtn");
+  const userMenu = document.getElementById("userMenu");
+
+  if (localStorage.getItem("loggedIn") === "true") {
+    loginBtn.style.display = "none";
+    registerBtn.style.display = "none";
+    userMenu.style.display = "block";
+  }
+
+  document.getElementById("logoutBtn").addEventListener("click", () => {
+    localStorage.removeItem("loggedIn");
+    location.reload();
+  });
+
+  document.getElementById("deleteBtn").addEventListener("click", () => {
+    if (confirm("Are you sure you want to delete your account?")) {
+      localStorage.removeItem("loggedIn");
+      alert("Account deleted.");
+      location.reload();
+    }
+  });
+
 </script>
 
 <!-- Bootstrap JS -->

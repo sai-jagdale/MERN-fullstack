@@ -17,11 +17,9 @@ body {
   color: rgb(0, 0, 0) !important;
 }
 
+
 .custom-nav {
-  background: linear-gradient(90deg, #ff9a9e, #fad0c4,  #ff9a9e);
-}
-.custom-sec {
-  background: linear-gradient(90deg, #b6fded, #f5fffb,  #b6fded);
+  background: #f4d099;
 }
 
 html {
@@ -38,21 +36,12 @@ html {
 }
 
 .btn-outline-pink {
-  color: #ff9a9e;          /* pink text */
+  color: #8c0649;          /* pink text */
   border-color: #8c0649;   /* pink border */
   
 }
 .btn-outline-pink:hover {
-  background-color: #ff9a9e; 
-  color: rgb(0, 0, 0); 
-}
-
-.btn-outline-blue {
-  color: #b6fded;          /* pink text */
-  border-color: #59c5d7;   /* pink border */
-}
-.btn-outline-blue:hover {
-  background-color: #b6fded; 
+  background-color: #cc0052; 
   color: rgb(0, 0, 0); 
 }
 
@@ -159,4 +148,85 @@ body {
 
 .form-title {
   color: black !important;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(4px);
+    }
+
+.login-card {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      animation: fadeUp 0.6s ease-out;
+    }
+
+.card-header {
+      background: #fbc97e;
+      color: #fff;
+      font-size: 1.4rem;
+      border-radius: 10px 10px 0 0;
+      padding: 12px;
+      font-weight: 600;
+    }
+
+.overlay-card {
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.18);
+    }
+
+.card-header-bar {
+      background: #fbc97e;
+      border-radius: 15px;
+      padding: 12px;
+      text-align: center;
+      margin-bottom: 25px;
+      color: white;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    /* Input Focus Glow */
+.form-control:focus {
+      border-color: #e33d7b;
+      box-shadow: 0px 0px 6px rgba(227,61,123,0.5);
+    }
+
+    /* Animation */
+@keyframes fadeUp {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+.custom-tabs .nav-link {
+  border-radius: 20px !important;
+  padding: 8px 20px;
+  margin-right: 8px;
+  border: 1px solid #d63384;
+  color: #d63384;
+  background: #fff;
+  transition: all 0.3s;
+}
+
+.custom-tabs .nav-link:hover {
+  background: #ffe6f2;
+}
+
+.custom-tabs .nav-link.active {
+  background: #d63384;
+  color: white !important;
+  border-color: #d63384;
 }
