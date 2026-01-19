@@ -33,12 +33,20 @@
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
+      <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Categories</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#flowers">Flowers</a></li>
+          <li><a class="dropdown-item" href="#bouquets">Flower Bouquets</a></li>
+          <li><a class="dropdown-item" href="#plants">Plants</a></li>
+        </ul>
+      </li>
     </div>
   </div>
 </nav>
 
 <!-- Product Section -->
-<section class="py-3">
+<section id="flowers" class="py-3">
   <div class="container">
     <h2 class="text-center mb-4">Our Featured Flowers</h2>
     <div class="row justify-content-center">
@@ -211,11 +219,11 @@
   </div>
 </section>
 
-<section class="container my-5" data-aos="fade-up">
+<section id="bouquets" class="container my-5" data-aos="fade-up">
   <h2 class="text-center mb-4">Our Bestselling Bouquets</h2>
   
   <div class="row g-5">
-    <div class="col-12 col-md-6 col-lg-3">
+    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
       <div class="card h-100">
         <img src="images/RoseBouquet.jpg" class="card-img-top" alt="Rose Bouquet">
         <div class="card-body text-center">
@@ -274,9 +282,92 @@
   </div>
 </section>
 
+<section id="plants" class="container my-5" data-aos="fade-up">
+  <h2 class="text-center mb-4">Our Plants</h2>
+  
+  <div class="row g-5">
+    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
+      <div class="card h-100">
+        <img src="images/RosePlant.jpg" class="card-img-top" alt="Rose Bouquet">
+        <div class="card-body text-center">
+          <h5>Rose Plant</h5>
+          <p>Rs. 100</p>
+          <div class="d-flex gap-2 justify-content-center">
+          <button class="btn btn-outline-pink"><i class="bi bi-cart"></i> Buy Now</button>
+          <button class="btn btn-outline-pink"><i class="bi bi-heart"></i> Wishlist</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
+      <div class="card h-100">
+        <img src="images/TulsiPlant.jpg" class="card-img-top" alt="Tulip Bouquet">
+        <div class="card-body text-center">
+          <h5>Tulsi Plant</h5>
+          <p>Rs. 250</p>
+          <div class="d-flex gap-2 justify-content-center">
+            <button class="btn btn-outline-pink"><i class="bi bi-cart"></i> Buy Now</button>
+            <button class="btn btn-outline-pink"><i class="bi bi-heart"></i> Wishlist</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
+      <div class="card h-100">
+        <img src="images/AeloVeraPlant.jpg" class="card-img-top" alt="Orchid Bouquet">
+        <div class="card-body text-center">
+          <h5>Aleovera Plant</h5>
+          <p>Rs. 300</p>
+          <div class="d-flex gap-2 justify-content-center">
+            <button class="btn btn-outline-pink"><i class="bi bi-cart"></i> Buy Now</button>
+            <button class="btn btn-outline-pink"><i class="bi bi-heart"></i> Wishlist</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
+      <div class="card h-100">
+        <img src="images/SteviaPlant.jpg" class="card-img-top" alt="Lily Bouquet">
+        <div class="card-body text-center">
+          <h5>Stevia Plant</h5>
+          <p>Rs. 900</p>
+          <div class="d-flex gap-2 justify-content-center">
+            <button class="btn btn-outline-pink"><i class="bi bi-cart"></i> Buy Now</button>
+            <button class="btn btn-outline-pink"><i class="bi bi-heart"></i> Wishlist</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- Footer -->
-<footer class="text-center from-title py-3 custom-nav">
-  <p class="mb-0">&copy; 2025 Transflower Store | Designed with 💗 using Bootstrap</p>
+<footer class="custom-nav from-title pt-5 pb-3 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">About Transflower</h5>
+        <p>We provide quality tech and lifestyle products with a touch of elegance and innovation.</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Connect with Us</h5>
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+        <p class="mt-3 mb-0">Email: support@transflower.in</p>
+      </div>
+    </div>
+    <hr class="border-light">
+    <div class="text-center">
+      <small>© 2025 Transflower Store. All Rights Reserved.</small>
+    </div>
+  </div>
 </footer>
 
 <!-- Bootstrap JS -->
