@@ -1,0 +1,19 @@
+Sockent Programming is a way for two programs to communicate with each other over a network.
+A Socket is one edn point of a two-way communication channel.
+
+    Client Program  <====== Socket ======>  Server Program
+
+1. Server is created at port 5000
+2. Client is connected to port 5000
+3. Client sends message to Server
+4. Server recives the message from the client 
+5. Server sends reply 
+6. Client recives the reply 
+7. Connection closes
+
+*Difference between Socket Programming & HTTP
+    Socket                      HTTP
+        Persistent connection       Request-response
+        Real Time                   Stateless
+        Faster                      More overhead
+        Custom protocal             Fixed protocal
