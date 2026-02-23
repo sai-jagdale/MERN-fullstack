@@ -5,6 +5,7 @@
             <script src="scripts/jquery.min.js"></script>
         </head>
         <body>
+            <!-- Presentation logic forcntent -->
             <h1>Transflower</h1>
             <p>fresh Flowers</p>
             <p id="para">Sai Jagdale</p>
@@ -63,7 +64,11 @@
 
         </body>
 
+    <!--Client side scripting using JQuery -->
         <script>
+
+            // Databinding : 
+            // associating data to the HTML elements
 
             $(document).ready(function(){
                 console.log("Document is ready");
@@ -88,6 +93,7 @@
                     // http://localhost:9898/api/users/2
                     // Changing the values of the html elements
                     // DOM Manipulation
+
                     $("#UserName").val(newUser.username);
                     $("#Password").val(newUser.password);
                 });
@@ -108,18 +114,28 @@
                     console.log(credentials);
                 });
 
+                // # - Selctor $("#....") here '#' is the selctor 
+                // it is used to sect the element with id attribute value
                 $("#btnfetchFlowers").click(function(){
 
                     var id = $("#txtId").val();
                     console.log("Fetching flowers from external API");
                     //call ajax
                     //R oprration : Read Operation external api call to rest api
+                    // External dat acess using JQuery Ajax function
 
                     $.ajax({
                         url: "/api/flowers/" + id,
                         method: "GET",
                         success: function(flower){
                             console.log(flower);
+
+                            // DOM manupulation
+                            // using JQuery to change the values of the HTML elements
+
+                            // Element Slecotor : $("#pName") - it will select the 
+                            // element with id attribute value as pName
+                            
                             $("#pName").text(flower.name);
                             $("#pColor").text(flower.color);
                             $("#pPrice").text(flower.price);
