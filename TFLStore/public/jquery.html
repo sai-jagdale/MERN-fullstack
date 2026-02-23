@@ -1,0 +1,137 @@
+<DOCTYPE! html>
+    <html>
+        <head>  
+            <tite>Jquery Demo</tite>
+            <script src="scripts/jquery.min.js"></script>
+        </head>
+        <body>
+            <h1>Transflower</h1>
+            <p>fresh Flowers</p>
+            <p id="para">Sai Jagdale</p>
+            <hr/>
+            <ol>
+                <li>Sam</li>
+                <li>Chait</li>
+            </ol>
+
+            <hr/>
+        <table>
+            <tr>
+                <td>UserName</td>
+                <td><input type="text" value="Sai" id="username" name="Username"/></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" value="seed" id="password" name="Password"/></td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td><button id="btnLogin">Login</button></td>
+            </tr>
+        </table>
+
+            <button id="btnApply">Apply</button>
+            <button id="btnReset">Reset</button>
+            <hr/>
+            <input type="text" id="txtId" placeholder="Enter flower id"/>
+            <br/>
+            <button id="btnfetchFlowers">Fetch Flowers</button>
+            <h2>Todays Fresh Flowers</h2>
+            <table>
+                <tr>
+                    <td>name</td>
+                    <td><p id="pName"></p></td>
+                </tr>
+                
+                    <td>Image</td>
+                    <td><img id="imgFlower" width="100" height="100"></img></td>
+                </tr>
+                <tr>
+                    <td>Color</td>
+                    <td><p id="pColor"></p></td>
+                </tr>
+                <tr>
+                    <td>Unit Price</td>
+                    <td><p id="pPrice"></p></td>
+                </tr>
+                <tr>
+                    <td>Likes</td>
+                    <td><p id="pLikes"></p></td>
+                </tr>
+                
+            </table>
+
+        </body>
+
+        <script>
+
+            $(document).ready(function(){
+                console.log("Document is ready");
+
+                // Event Binding 
+                //       The event is binded to the element and when the 
+                //        event occurs the event handler is executed
+
+                $("#btnApply").click(function(){
+                    console.log("Apply Button is clicked");
+                    // Databinding
+                    // associate data  to the HTML element
+                    $("#para").text("Welcome to TFL Store");  // DOM Manipulation
+                    $("#para").show();
+
+                    var newUser = {
+                        "username": "Sam",
+                        "password": "sam"
+                    }
+                    // before setting value
+                    //can you invoke $.ajax = () to fetch user details from
+                    // http://localhost:9898/api/users/2
+                    // Changing the values of the html elements
+                    // DOM Manipulation
+                    $("#UserName").val(newUser.username);
+                    $("#Password").val(newUser.password);
+                });
+                $("#btnReset").click(function(){
+                    
+                    $("#para").hide();
+                    console.log("Reset Button is clicked");
+                });
+
+                $("#btnLogin").click(function(){
+                    // geting values from HTML elements 
+                    var username = $("#username").val();
+                    var password = $("#password").val();
+                    var credentials = {
+                        username: username,
+                        password: password
+                    }
+                    console.log(credentials);
+                });
+
+                $("#btnfetchFlowers").click(function(){
+
+                    var id = $("#txtId").val();
+                    console.log("Fetching flowers from external API");
+                    //call ajax
+                    //R oprration : Read Operation external api call to rest api
+
+                    $.ajax({
+                        url: "/api/flowers/" + id,
+                        method: "GET",
+                        success: function(flower){
+                            console.log(flower);
+                            $("#pName").text(flower.name);
+                            $("#pColor").text(flower.color);
+                            $("#pPrice").text(flower.price);
+                            $("#pLikes").text(flower.likes);
+                            $("#imgFlower").attr("src", flower.imageurl);
+                        },
+                        error: function(error){
+                            console.log(error);
+                        }
+                    });
+                });
+            });            
+
+        </script>
+    </html>
