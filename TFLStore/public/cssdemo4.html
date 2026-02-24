@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+   <html>
+    <head>
+        <title>CSS Demo4</title>
+        <style>
+            body { background-color: rgb(255, 255, 255); }
+            p { font-family: 'Courier New', Courier, monospace; font-size: 20px; color: rgb(255, 0, 255); }
+            .myDivStyle1 { background-color: rgb(255, 204, 255); }
+        </style>
+    </head>
+    <body>
+        <div class="myDivStyle1">
+            <h1 style="color: rgb(255, 0, 255); text-align: center;">Transflower Store</h1>
+            <p>Best place for your flowers</p>
+        </div>
+
+        <div>
+            <h1 style="color: rgb(197, 59, 103); text-align: center;">Transflower Store</h1>
+            <p>Best place for your flowers</p>
+        </div>
+
+        <button id="btn">Change color of first div</button>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#btn').click(function(){
+                    $('.myDivStyle1').css('background-color', 'rgb(255, 153, 255)');
+                });
+            });
+        </script>
+    </body>
+   </html>
