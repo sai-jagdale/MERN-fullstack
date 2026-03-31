@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Login from './Login';
+import Register from './Register';
+import Products from './Product';
 
+
+// React  js introduces a new synatx for wriiting presentation
+// logic for component using 
+// JSX ---- JavaScript extension for XML
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="\images\GirlBeforeAMirror.jpg" className="App-logo" alt="logo" />
-        <p> Doing ordinary things extra ordinarily </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn us learn Dynamic UI Programming with React
-        </a>
-      </header>
+      <Login></Login>
+      <hr/>
+      <Register></Register>
+      <hr/>
+      <Hello></Hello>
+      <hr/>
+      <Products></Products>
     </div>
   );
+}
+
+//function Component 
+function Hello(){
+  return(
+    <div>
+      <h3>Hello, World!</h3>
+      <h3>Wellcome to React</h3>
+    </div>
+  )
 }
 
 export default App;
