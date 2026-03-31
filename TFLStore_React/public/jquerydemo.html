@@ -1,0 +1,44 @@
+<DOCTYPE! html>
+    <html>
+        <head>  
+            <title>Jquery Demo 2</title>
+            <script src="scripts/jquery.min.js"></script>
+        </head>
+        <body>
+
+            <h1>Dropdown menu</h1>
+
+            <table>
+                <tr>
+                    <td>State</td>
+                    <td>
+                        <select id="State">
+                            <option value="1">Maharashtra</option>
+                            <option value="2">Gujarat</option>
+                            <option value="3">Rajasthan</option>
+                            <option value="4">Karnataka</option>
+                            <optiom value="5">Tamil Nadu</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button id="btnSelect">Get Cities</button></td>
+                </tr>
+            </table>
+
+            <script>
+                $(document).ready(function() {
+                    // ES 6 javascript
+                    //Arrow function : ()=>{}
+                    $("#btnSelect").click(()=>{
+
+                        var selectedState = $("#State option:selected").text();
+                        alert("Selected state is : " + selectedState);
+
+                    });
+                });
+            </script>
+
+        </body>
+    </html>

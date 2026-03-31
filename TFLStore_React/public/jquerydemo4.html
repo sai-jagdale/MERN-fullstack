@@ -1,0 +1,30 @@
+<DOCTYPE! html>
+    <html>
+        <head>  
+            <title>Jquery Demo 4</title>
+            <script src="scripts/jquery.min.js"></script>
+        </head>
+        <body>
+            <h1>JQuery Demo 4</h1>
+            
+            <form action="/api/register" method="POST">
+                <input type="text" value="Sai" name="firstname"/>
+                <br/>
+                <input type="text" value="Jagdale" name="lastname"/>
+                <br/>
+                <input type="date" name="resultdate"/>
+                <br/>
+                Passed : <input type="checkbox" value="passed" name="result"/>
+                <br/>
+                <p>Selected your Subject : </p>
+                    <select id="subject" name="subject">
+                        <option>Software Engineering</option>
+                        <option>AWS</option>
+                        <option>Java</option>
+                        <option>Python</option>
+                    </select>
+                
+                <button type="submit">Register</button>
+            </form>             
+        </body>
+    </html>
