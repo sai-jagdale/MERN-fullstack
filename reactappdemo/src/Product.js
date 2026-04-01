@@ -6,10 +6,12 @@ class Product extends React.Component {
         return(
             <div>
                 <h3>Product Details</h3>
-
-                <p>Title : Girl Before Mirror</p>
-                <img src="/images/GirlBeforeAMirror.jpg" width="100" height="100"/>
-                <p>Price : Rs100000</p>
+                    {/* this.props.title , etc.. are databinding expressions*/}
+                <p>Title:{this.props.title}</p>
+                <img src={this.props.imageurl} width="100" height="100"/>
+                <p>Price : Rs{this.props.price}</p>
+                <p>Color : {this.props.color}</p>
+                <p>Likes : {this.props.likes}</p>
                 <br/>
                 <button>Add to Cart</button>
 

@@ -1,0 +1,12 @@
+[
+    {"id":1,"name":"Rose","color":"Red","price":10,"imageurl":"/images/rose.jpg","likes":4500},
+    {"id":2,"name":"Jasmine","color":"White","price":12,"imageurl":"/images/jasmine.jpg","likes":3000},
+    {"id":3,"name":"Tulip","color":"Pink","price":15,"imageurl":"/images/tulip.jpg","likes":2500},
+    {"id":4,"name":"Lily","color":"White-Pink","price":8,"imageurl":"/images/lily.jpg","likes":4000},
+    {"id":5,"name":"Orchid","color":"Purple","price":20,"imageurl":"/images/orchid.jpg","likes":1500},
+    {"id":6,"name":"Sunflower","color":"Yellow","price":5,"imageurl":"/images/sunflower.jpg","likes":3500},
+    {"id":7,"name":"Daisy","color":"White-Yellow","price":7,"imageurl":"/images/daisy.jpg","likes":2000},
+    {"id":8,"name":"Marigold","color":"Orange","price":6,"imageurl":"/images/marigold.jpg","likes":1800},
+    {"id":9,"name":"Lavender","color":"Purple","price":9,"imageurl":"/images/lavender.jpg","likes":2200},
+    {"id":10,"name":"Peony","color":"Pink-Red","price":18,"imageurl":"/images/peony.jpg","likes":2700}
+]
