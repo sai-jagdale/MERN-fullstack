@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 //Class Component
 class Login extends React.Component {
 
@@ -8,13 +7,24 @@ class Login extends React.Component {
         return(
             <div>
                 <form>
-                    <lable>User Name</lable>
-                    <input type="text" name="username"/>
-                    <br/>
-                    <lable>Password</lable>
-                    <input type="password" name="password"/>
-                    <br/>
-                    <button type="submit">Login</button>
+                    <form>
+                        <div className="form-group">
+                            <lable for="email">Email:</lable>
+                            <input type="email" className="form-control" id="email" placeholder="Enter email" name="email"/>
+                        </div>
+                        <div className="form-group">
+                            <lable for="pwd">Password:</lable>
+                            <input type="password" className="form-control" id="pwd" placeholder="Enter password" name="password"/>
+                        </div>
+                        <div className="checkbox">
+                            <label>
+                                <input type="checkbox" name="remember"/> Remember me
+                            </label>
+                        </div>
+                        <div className="form-group">
+                            <button type="submit" className="btn btn-primary">Login</button>
+                        </div>
+                    </form>
                 </form>
             </div>
         );

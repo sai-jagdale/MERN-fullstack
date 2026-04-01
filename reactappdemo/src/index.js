@@ -2,7 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+
+// Web Vitals are a set of metrics from Google that quantify the user 
+// experience (UX) of a webpage, focusing on loading performance, 
+// interactivity, and visual stability. In React.js applications, 
+// they can be measured using the official web-vitals library and 
+// optimized using specific React-centric strategies
 import reportWebVitals from './reportWebVitals';
+
 
 // React Virtual DOM  
 const root = ReactDOM.createRoot(document.getElementById('root'));
