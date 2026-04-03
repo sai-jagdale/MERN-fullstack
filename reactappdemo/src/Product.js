@@ -41,10 +41,11 @@ class Product extends React.Component {
                     <img src={this.props.imageurl} width="100" height="100"/>
                     <p>Price : Rs{this.props.price}</p>
                     <p>Color : {this.props.color}</p>
-                    <p>Likes : {this.props.likes}</p>
+                    {/* since we need to cahnge the likes value , we made it state */}
+                    <p>Likes : {this.state.likes}</p>
                     {/* here count is the property of Counter , that is passed to 
                     the counter component */}
-                    <Counter count={this.props.likes} handler={this.handler}></Counter>
+                    <Counter count={this.state.likes}  handler={this.handler}></Counter>
                 <br/>
                 <button>Add to Cart</button>
 

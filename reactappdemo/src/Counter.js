@@ -19,7 +19,8 @@ class Counter extends React.Component{
                     //console.log("dislike");
                     
                     this.setState({count:this.state.count-1});
-                    
+                    this.props.handler(this.state.count-1);
+
                 }}>-</button>
 
                 {/* here the value comens from the likes 
@@ -34,6 +35,7 @@ class Counter extends React.Component{
                     //console.log("like");
                     
                     this.setState({count:this.state.count+1});
+                    this.props.handler(this.state.count+1);
 
                 }}>+</button>
             </div>
