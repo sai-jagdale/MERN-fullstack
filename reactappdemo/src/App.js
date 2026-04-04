@@ -4,6 +4,7 @@ import Login from './Login';
 import Register from './Register';
 import Products from './Product';
 import List from './List';
+import Orders from './Orders';
 
 // React  js introduces a new synatx for wriiting presentation
 // logic for component using 
@@ -22,7 +23,7 @@ function BasicRouting(){
     <div>
       <h1>Basic Routing</h1>
       <Router>
-        <Link to="/">Home</Link> | <Link to="/products">Products</Link> | <Link to="/login">Login</Link> | <Link to="/register">Register</Link>
+        <Link to="/">Home</Link> | <Link to="/products">Products</Link> | <Link to="/orders">Orders</Link> | <Link to="/login">Login</Link> | <Link to="/register">Register</Link>
         
         {/* Switch was used in React Router v5 and below.
             It is not used in v6. Switch rendered only one route at a time. */}
@@ -31,6 +32,7 @@ function BasicRouting(){
           <Route path="/products" component={List} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
+          <Route path="/orders" component={Orders} />
         </Switch>
       </Router>
     </div>

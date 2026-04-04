@@ -1,0 +1,12 @@
+[
+    {"id":1,"customer_name":"Sai Jagdale","productid":1,"quantity":2,"totalprice":20},
+    {"id":2,"customer_name":"Samruddhi Rasal","productid":3,"quantity":1,"totalprice":15},
+    {"id":3,"customer_name":"Chaitrali Patil","productid":5,"quantity":3,"totalprice":60},
+    {"id":4,"customer_name":"Arnav Tolahunase","productid":2,"quantity":4,"totalprice":48},
+    {"id":5,"customer_name":"Tejas Naukudkar","productid":4,"quantity":2,"totalprice":16},
+    {"id":6,"customer_name":"David Davis","productid":6,"quantity":5,"totalprice":25},
+    {"id":7,"customer_name":"Eve Wilson","productid":8,"quantity":3,"totalprice":18},
+    {"id":8,"customer_name":"Frank Miller","productid":7,"quantity":1,"totalprice":7},
+    {"id":9,"customer_name":"Grace Lee","productid":9,"quantity":2,"totalprice":18},
+    {"id":10,"customer_name":"Henry Taylor","productid":10,"quantity":1,"totalprice":18}
+]
