@@ -6,7 +6,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className='text-center'>
-        <BasicRouting />
+        
+        <BasicRouting /> 
       </div>
     </BrowserRouter>
   );

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-function Dashboard() {
+function Dashboard({ title = "Corporate Dashboard", financialYear = 2026 }) {
 
     console.log("initialization");
 
     const [company, setCompany] = useState("indra");
-    const [year, setYear] = useState(2025);
+    const [year, setYear] = useState(financialYear);
 
     // Event handlers
     const changeCompany = () => {
@@ -32,7 +32,7 @@ function Dashboard() {
 
     return (
         <div className="text-center">
-            <h1>Transflower Balancesheet</h1>
+            <h1>{title}</h1>
             <br />
             <h3>{company}</h3>
             <h3>{year}</h3>
@@ -44,4 +44,4 @@ function Dashboard() {
     );
 }
 
-export default Dashboard;
+export default Dashboard;   

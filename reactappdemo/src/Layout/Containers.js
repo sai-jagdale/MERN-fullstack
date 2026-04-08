@@ -10,6 +10,7 @@ import About from "./About";
 import Contact from "./Contact";
 import GoodBye from "./Goodbye";
 import Hello from "./Hello";
+import Dashboard from "../Dashboard";
 
 
 function BasicRouting() {
@@ -26,6 +27,7 @@ function BasicRouting() {
       <Link to="/orders">Orders</Link>|
       <Link to="/hello">Hello</Link>|
       <Link to="/cart">Shopping Cart</Link>|
+      <Link to="/dashboard">Dashboard</Link>
 
 
       <hr />
@@ -41,6 +43,7 @@ function BasicRouting() {
         <Route path="/goodbye" element={<GoodBye />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/hello" element={<Hello />} />
+        <Route path="/dashboard" element={<Dashboard />} />
 
       </Routes>
     </div>
