@@ -1,0 +1,7 @@
+[
+    {"id":1,"name":"Rose","color":"Red","price":10,"imageurl":"/images/rose.jpg","quantity":20},
+    {"id":2,"name":"Jasmine","color":"White","price":12,"imageurl":"/images/jasmine.jpg","quantity":15},
+    {"id":3,"name":"Sunflower","color":"Yellow","price":5,"imageurl":"/images/sunflower.jpg","quantity":25},
+    {"id":4,"name":"Daisy","color":"White-Yellow","price":7,"imageurl":"/images/daisy.jpg","quantity":30},
+    {"id":5,"name":"Peony","color":"Pink-Red","price":18,"imageurl":"/images/peony.jpg","quantity":12}
+]

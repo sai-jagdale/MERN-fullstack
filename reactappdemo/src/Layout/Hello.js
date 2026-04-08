@@ -6,7 +6,7 @@ function Hello(){
     return(
         <div>
             <h2>Wellcome to transflower</h2>
-            <button onClick={() => navigate("/goodbye")}>GoodBye</button>
+            <button className="btn btn-primary" onClick={() => navigate("/goodbye")}>GoodBye</button>
         </div>
     );
 }

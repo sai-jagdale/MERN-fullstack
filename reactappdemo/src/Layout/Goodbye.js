@@ -6,7 +6,7 @@ function Goodbye(){
     return( 
         <div>
             <h2>Goodbye from Transflower</h2>
-            <button onClick={() => navigate("/")}>Hello</button>
+            <button className="btn btn-primary" onClick={() => navigate("/")}>Hello</button>
         </div>
     );
 }

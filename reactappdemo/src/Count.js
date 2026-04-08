@@ -1,0 +1,17 @@
+import react,{useState,useEffect} from "react";
+
+function CounterExample(){
+    const[count,setCount ]=useState(0);
+    useEffect(()=>{
+        document.title=`You clicked ${count} times`
+    });
+    return(
+        <div>
+            <p>You Clicked   {count}</p>
+
+            <button onClick={()=>setCount(count+1)}>Click me</button>
+        </div>
+    )
+}
+
+export default CounterExample;

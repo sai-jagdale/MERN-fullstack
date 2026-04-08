@@ -38,7 +38,7 @@ class Product extends React.Component {
                     then gets binded with the p of 'title' */}
                     <p>Title:{this.props.title}</p>
                     {/* get image url and bind it with the image src */}
-                    <img src={this.props.imageurl} width="100" height="100"/>
+                    <img src={this.props.imageurl} width="100" height="100" alt={this.props.title}/>
                     <p>Price : Rs{this.props.price}</p>
                     <p>Color : {this.props.color}</p>
                     {/* since we need to cahnge the likes value , we made it state */}
